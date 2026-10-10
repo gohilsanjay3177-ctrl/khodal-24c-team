@@ -1,1 +1,0 @@
-# khodal-24c-team
