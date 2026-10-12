@@ -13,6 +13,26 @@ body{background:#f4f7fb;color:#17324d}
 .list{border-bottom-color:#e2e8f0}
 .nav{background:#fff;border-top:1px solid #dce5ef;box-shadow:0 -3px 12px rgba(23,50,77,.05)}
 .nav button{color:#64748b}.nav button.active{color:#167d61;background:#e8f5f0}
+
+/* Khodal 24C Team — White + Green mobile refresh */
+:root{--bg:#f4f8f5;--panel:#ffffff;--line:#d9e8df;--gold:#16845b;--text:#173b2d;--muted:#60786c;--green:#16845b;--red:#d64545}
+body{background:#f4f8f5!important;color:#173b2d!important}
+.wrap{max-width:900px;margin:auto;padding:14px 12px 100px}
+.card{background:#fff!important;border:1px solid #d9e8df!important;border-radius:18px;box-shadow:0 5px 18px rgba(24,83,55,.06);color:#173b2d}
+.brand{color:#16845b!important}
+.head h2{color:#173b2d}
+.muted,.field label{color:#60786c!important}
+.field input,.field select,.field textarea,input,select,textarea{background:#fff!important;color:#173b2d!important;border:1px solid #cfe0d5!important;border-radius:10px}
+.btn,.btn.gold{background:#16845b!important;color:#fff!important;border:1px solid #16845b!important;border-radius:11px}
+.stat{background:#fff!important;color:#173b2d!important;border:1px solid #d9e8df!important;border-radius:15px;box-shadow:0 4px 14px rgba(24,83,55,.05)}
+.stat small,.stat strong{color:#173b2d!important}
+.list{background:#f7fbf8!important;border:1px solid #e0ece4!important;border-radius:12px;padding:12px;margin:8px 0;color:#173b2d}
+.tag{background:#e4f5eb!important;color:#16845b!important;border-radius:999px;padding:5px 9px}
+.nav{background:rgba(255,255,255,.97)!important;border-top:1px solid #d9e8df!important;box-shadow:0 -4px 18px rgba(24,83,55,.07)}
+.nav button{color:#60786c!important}
+.nav button b{color:#16845b!important}
+#pendinglist .list{display:block}
+@media(max-width:520px){.wrap{padding:10px 10px 95px}.card{padding:13px;margin:10px 0}.grid{gap:9px}.stat{min-height:86px;padding:12px 9px}}
 </style></head><body><div id="toast" class="toast hidden"></div><main id="app" class="wrap"></main><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script>
 (()=>{'use strict';const SUPABASE_URL='https://qxfbbypbttdhkqiqevco.supabase.co';const SUPABASE_KEY='sb_publishable_KKT8oI1lWjH0ugZ1bY1nDw_vuqyIIIw';const sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);const $=s=>document.querySelector(s);const money=n=>'₹'+Number(n||0).toLocaleString('en-IN',{maximumFractionDigits:2});const today=()=>new Date().toISOString().slice(0,10);const month=()=>today().slice(0,7)+'-01';let session=null,profile=null,selectedMemberId=null,role='member',members=[],funds=[],expenses=[],page='login',busy=false,splashDone=false,splashTimer=null;
 function toast(s,err=false){let t=$('#toast');t.textContent=s;t.classList.toggle('err',err);t.classList.remove('hidden');setTimeout(()=>t.classList.add('hidden'),3500)}function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function admin(){return role==='admin'||role==='super_admin'}function title(t){return `<div class="head"><h2>${t}</h2><span class="tag">${esc(role.replace('_',' ').toUpperCase())}</span></div>`}function field(label,name,type='text',required=true,extra=''){return `<div class="field"><label>${label}</label><input name="${name}" type="${type}" ${required?'required':''} ${extra}></div>`}
