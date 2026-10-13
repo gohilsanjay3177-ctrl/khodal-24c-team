@@ -181,3 +181,37 @@ sb.auth.getSession().then(({data})=>{session=data.session;if(session)loadData();
 body[data-theme="black"] .nav{background:#000!important;border-color:#fff!important}body[data-theme="black"] .nav button,body[data-theme="black"] .nav button b{color:#fff!important}body[data-theme="black"] .nav button.active{background:#292929!important;color:#fff!important}body[data-theme="black"] .card,body[data-theme="black"] .stat{background:#171717!important;color:#fff!important;border-color:#444!important}body[data-theme="black"] .stat small,body[data-theme="black"] .stat strong{color:#fff!important}body[data-theme="black"] .brand,body[data-theme="black"] .tag{color:#fff!important}body[data-theme="black"] .field input,body[data-theme="black"] .field select,body[data-theme="black"] .field textarea{background:#111!important;color:#fff!important;border-color:#555!important}
 body[data-theme="white"]{background:#f8fafc!important;color:#172033!important}body[data-theme="white"] .nav{background:#fff!important;border-color:#d8dee8!important}body[data-theme="white"] .nav button,body[data-theme="white"] .nav button b{color:#475467!important}body[data-theme="white"] .nav button.active{background:#edf2f7!important;color:#172033!important}body[data-theme="white"] .brand,body[data-theme="white"] .tag{color:#172033!important}
 </style>
+<style>
+/* FINAL accessibility contrast patch: every action button stays readable in both modes */
+body[data-theme="black"] button,
+body[data-theme="black"] .btn,
+body[data-theme="black"] button.gold,
+body[data-theme="black"] .btn.gold,
+body[data-theme="black"] .gold,
+body[data-theme="black"] .back-btn,
+body[data-theme="black"] .member-call,
+body[data-theme="black"] .member-remove,
+body[data-theme="black"] .modal-x {background:#262626!important;color:#ffffff!important;border:1px solid #777!important;}
+body[data-theme="black"] button:disabled {opacity:1!important;color:#f5f5f5!important;background:#303030!important;border-color:#666!important;}
+body[data-theme="black"] .tag {background:#e8f5ee!important;color:#123b2c!important;}
+body[data-theme="black"] .toast {color:#ffffff!important;}
+body[data-theme="white"] button,
+body[data-theme="white"] .btn,
+body[data-theme="white"] button.gold,
+body[data-theme="white"] .btn.gold,
+body[data-theme="white"] .gold,
+body[data-theme="white"] .back-btn,
+body[data-theme="white"] .member-call,
+body[data-theme="white"] .member-remove,
+body[data-theme="white"] .modal-x {background:#ffffff!important;color:#172033!important;border:1px solid #aab4c2!important;}
+body[data-theme="white"] button:disabled {opacity:1!important;color:#344054!important;background:#e8edf3!important;border-color:#aab4c2!important;}
+body[data-theme="white"] .tag {background:#e8f5ee!important;color:#123b2c!important;}
+body[data-theme="white"] .toast {color:#ffffff!important;}
+/* High contrast for generated controls, including reminder/add/save/export and modal actions */
+body[data-theme="black"] button *, body[data-theme="white"] button * {color:inherit!important;}
+body[data-theme="black"] .field label,body[data-theme="white"] .field label {font-weight:600!important;}
+body[data-theme="black"] .profile-modal-box {background:#171717!important;color:#fff!important;border-color:#666!important;}
+body[data-theme="black"] .profile-modal-box h3,body[data-theme="black"] .profile-modal-box label {color:#fff!important;}
+body[data-theme="white"] .profile-modal-box {background:#fff!important;color:#172033!important;border-color:#aab4c2!important;}
+body[data-theme="white"] .profile-modal-box h3,body[data-theme="white"] .profile-modal-box label {color:#172033!important;}
+</style>
