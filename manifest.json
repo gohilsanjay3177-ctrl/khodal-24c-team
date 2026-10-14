@@ -4,11 +4,11 @@
   "display": "standalone",
   "name": "Khodal 24C Team",
   "orientation": "any",
-  "scope": "/khodal-24c-team/"
+  "scope": "/khodal-24c-team/",
   "short_name": "Khodal 24C",
-  "start_url": "/khodal-24c-team/"
+  "start_url": "/khodal-24c-team/",
   "theme_color": "#5c172f",
-  "id": " /khodal-24c-team/",
+  "id": "/khodal-24c-team/",
   "description": "Khodal 24C Team Management App",
   "lang": "gu"
 }
