@@ -1,13 +1,14 @@
 {
-  "id": "/khodal-24c-team/",
-  "name": "Khodal 24C Team",
-  "short_name": "Khodal 24C",
-  "description": "Khodal 24C Team Management App",
-  "start_url": "/khodal-24c-team/",
-  "scope": "/khodal-24c-team/",
+  "background_color": "#5c172f",
+  "dir": "ltr",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#fbf7ef",
-  "theme_color": "#5b1730",
+  "name": "Khodal 24C Team",
+  "orientation": "any",
+  "scope": "//khodal-24c-team/",
+  "short_name": "Khodal 24C",
+  "start_url": "/ /khodal-24c-team/",
+  "theme_color": "#5c172f",
+  "id": " /khodal-24c-team/",
+  "description": "Khodal 24C Team Management App",
   "lang": "gu"
 }
